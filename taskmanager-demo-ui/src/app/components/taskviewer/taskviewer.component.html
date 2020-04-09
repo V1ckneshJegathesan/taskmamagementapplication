@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Task Name</th>
+      <th>Task Description</th>
+      <th>Task Start Date</th>
+      <th class="text-right">Task Duration</th>
+    </tr>
+    <tr *ngFor="let task of tasks">
+        <td>
+          <a [routerLink]="['/taskviewer/view', task.id]">{{task.task_name}}</a>
+        </td>
+        <td>{{task.task_description}}</td>
+        <td>{{task.task_start_date}}</td>
+        <td class="text-right">{{task.task_duration}}</td>
+      </tr>
+  </table>
+</div>
